@@ -1,0 +1,62 @@
+{
+  "name": "linkedin-autoresponses",
+  "version": "1.0.0",
+  "description": "This project is an API that receives messages from WhatsApp to respond and get data from the LinkedIn messages.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "NODE_ENV=local nodemon index.js",
+    "debug": "NODE_ENV=local nodemon --inspect index.js localhost",
+    "lint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianArroyoC/linkedin-autoresponses.git"
+  },
+  "keywords": [
+    "LinkedIn",
+    "Nodejs",
+    "Puppeteer",
+    "API",
+    "web scraping",
+    "auto responses",
+    "Twilio",
+    "WhatsApp",
+    "chatbot",
+    "automation",
+    "Dialogflow ES"
+  ],
+  "author": "Adrian Arroyo <adrianarroyoceja@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrianArroyoC/linkedin-autoresponses/issues"
+  },
+  "homepage": "https://github.com/AdrianArroyoC/linkedin-autoresponses#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
